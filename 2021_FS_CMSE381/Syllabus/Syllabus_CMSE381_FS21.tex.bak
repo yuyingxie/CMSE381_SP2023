@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pifont}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[left=2.6cm, right=2.6cm, top=2.6cm, bottom=2.6cm]{geometry}
+
+\pagestyle{empty}
+
+
+\begin{document}
+
+\begin{center}
+{\bf {\Large CMSE 381 \  Fundamentals of Data Science Methods}  \\
+\vskip.1in MWF 3:00 PM - 4:20 PM;  
+Class location: Engineering Building 2243; \\
+Zoom: https://msu.zoom.us/j/4023112734}
+\end{center}
+
+
+\vskip.25in \noindent\textbf{Instructor:} \ Yuying Xie, 1513 Engineering Building 1513,
+{\bf Email:} xyy@msu.edu; 
+
+{\bf Office Hours}: Wenday, 11:30 am -1:30 pm, or by appointment\\
+TA: Luis Polancocontreras \\
+TA's Office Hourse:  Wednesday and Friday from 12-2pm in Engineering Building 1508A \\
+TA's email: polanco2@msu.edu
+
+                       
+
+
+\vskip.25in \noindent\textbf{Textbook:}  \textit{An Introduction to Statistical Learning: With Applications in R} \\
+You can download it from https://statlearning.com/. 
+
+Additional Reference: \textit{The Elements of Statistical Learning: Data Mining, Inference, and Prediction.} You can download it from https://web.stanford.edu/~hastie/ElemStatLearn/.
+
+\vskip.25in \noindent\textbf{Prerequisites:}(STT 180 and MTH 314 and CMSE 201 and STT 380) or (STT 180 and MTH 314 and CMSE 201 and STT 441 and STT 442).
+
+
+\vskip.25in \noindent \textbf{Course Description:} CMSE 381 is a introduction course to statistical and machine learning. It covers the fundamental of data science methods, including unsupervised learning and supervised learning, feature extraction, dimension reduction, clustering, regression and classification. 
+
+\vskip.25in \noindent \textbf{Course objectives:} Understand how to find patterns and structure in data using statistical methods and machine learning algorithms, and be able to implement simple versions of such techniques. Understand the concepts of unsupervised and supervised learning broadly, in addition to having proficiency in common algorithms and ideas within each field
+
+
+\vskip.25in \noindent\textbf{Homework}:
+\begin{itemize}
+    \item Homework will be assigned every class day by 9:00 p.m.
+    \item Homework will be due at the 11:59pm on Friday. Please submit your homework through D2L.
+    \item {\bf No} late homework will be accepted. 
+\end{itemize}
+
+\vskip.25in 
+\noindent\textbf{Quizzes}:
+\begin{itemize}
+    \item There are \textbf{four} 30 minutes Quizzes at the beginning of the class during the semester.
+    \item The quiz questions will be based on homework problems and the examples given in classes.
+    \item The quizzes will be given in class on the following days:\\
+    Quiz 1: Sep 24th; Quiz 2: Oct 15th; Quiz 3: Nov 5th;  Quiz 4: Dec 10th;
+    \item Final Project due 11:59 pm on Dec 13th
+\end{itemize}
+
+\vskip.25in \noindent\textbf{Final Grades:}
+\begin{itemize}
+            \item 30\% for Homework
+            \item 40\% for Quizzes
+            \item 30\% for the Final Project (Monday, Apr 27th).
+ \end{itemize}
+The grades will be given roughly according to the following scheme: \\
+\vskip.15in
+    \begin{tabular}{cc c c c c c c c}
+        \hline
+        Percentage (\%) & 90-100 & 80-89 & 70-79 & 60-69 & 50-59& 40-49& 30-39& 0-29 \\
+        \hline
+        Grade & 4.0 & 3.5 & 3.0 & 2.5 & 2.0 & 1.5 & 1.0 & 0 \\
+        \hline
+       
+    \end{tabular}
+
+
+\vskip.25in \noindent\textbf{Academic Honesty}: \\
+The Department of Statistics and Probability adheres to the policies of academic honesty as specified in the General Student Regulations 1.0, Protection of Scholarships and Grades and in the All-University of Integrity of Scholarship and Grades which are included in Spartan Life: Student Handbook and Resource Guide. Student who plagiarize will receive a grade 0.0 on the assignment or exam. 
+
+\vskip.25in \noindent\textbf{Accommodations for Students with Disabilities}: \\
+Students with disabilities should contact the Resource Center for People with Disabilities at 517-884-RCPD or on the web at rcpd.msu.edu. If you are eligible for an accommodation, you will be issued a verified individual service accommodation (VISA) form. Please present this form to me at the start of the term or two weeks prior to the accommodation date. \\
+
+
+\vskip.25in \noindent\textbf{Other important information}: \\
+ 
+\textbf{COVID-19 policy:} As a reminder, the university has put in place a mask mandate and 
+students are required to wear properly fitting masks during indoor class meetings. You 
+should refrain from eating or drinking during class to avoid having to remove your mask. 
+If you do consume food or drinks inside, you should remove the mask only to take a sip 
+of beverage or a bite to eat, and you must replace the mask properly between each bite 
+and sip. If you do not comply with this mask mandate, you may be asked to leave the 
+building. If you forgot your mask, you will be allowed to leave to go get one.  
+ 
+If you have to miss class due to illness or self-isolation (as per the CDC recommended 
+guidelines), your instructor will work to provide the necessary accommodations to 
+ensure that your performance in class is not significantly impacted. However, should 
+you find that your overall success in your courses is significantly impacted by any 
+illness, please refer to the University policy on medical leave and withdrawal. 
+
+
+
+The instructor reserves the right to make any changes that he deems academically advisable. 
+
+
+\end{document}

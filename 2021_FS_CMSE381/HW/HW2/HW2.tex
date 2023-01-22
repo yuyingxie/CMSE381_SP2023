@@ -1,0 +1,109 @@
+% Don't touch this %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in,headheight=3ex,headsep=3ex]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+
+
+\newcommand{\blankline}{\quad\pagebreak[2]}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Modify Course title, instructor name, semester here %%%%%%%%
+
+\title{\underline{CMSE 381 }}
+\author{\underline{\textbf{Spring Semester 2021}}}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't touch this %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[sc]{mathpazo}
+\linespread{1.05} % Palatino needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+\usepackage[mmddyyyy]{datetime}% http://ctan.org/pkg/datetime
+\usepackage{advdate}% http://ctan.org/pkg/advdate
+\newdateformat{syldate}{\twodigit{\THEMONTH}/\twodigit{\THEDAY}}
+\newsavebox{\MONDAY}\savebox{\MONDAY}{Mon}% Mon
+\newcommand{\week}[2]{%
+%  \cleardate{mydate}% Clear date
+% \newdate{mydate}{\the\day}{\the\month}{\the\year}% Store date
+  \paragraph*{\kern-2ex\quad #1, \syldate{\today} - \AdvanceDate[4]\syldate{\today}:}% Set heading  \quad #1
+%  \setbox1=\hbox{\shortdayofweekname{\getdateday{mydate}}{\getdatemonth{mydate}}{\getdateyear{mydate}}}%
+  \ifdim\wd1=\wd\MONDAY
+    \AdvanceDate[7]
+  \else
+    \AdvanceDate[7]
+  \fi%
+}
+\usepackage{setspace}
+\usepackage{multicol}
+%\usepackage{indentfirst}
+\usepackage{fancyhdr,lastpage}
+\usepackage{url}
+\pagestyle{fancy}
+\usepackage{hyperref}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{layout}
+
+\lhead{}
+\chead{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Don't touch this %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lfoot{}
+\cfoot{\small \thepage/\pageref*{LastPage}}
+\rfoot{}
+
+\usepackage{array, xcolor}
+\usepackage{color,hyperref}
+\definecolor{clemsonorange}{HTML}{EA6A20}
+\hypersetup{colorlinks,breaklinks,linkcolor=clemsonorange,urlcolor=clemsonorange,anchorcolor=clemsonorange,citecolor=black}
+\usepackage{txfonts}
+\begin{document}
+
+\maketitle
+
+\blankline
+
+\begin{enumerate}
+	\item Assume $Y = f(X) + \epsilon$. From training data, we obtain the estimate $\hat{f}(x)$ of $f(x)$. Now assume both $\hat{f}$ and $X = x$ are fixed. prove that
+	\[
+	  E( (Y - \hat{f}(X))^2 | X = x) = [f(x) - \hat{f}(x)]^2 + \text{Var}(\epsilon).
+	\]
+	\item Assuming the same setting as in Question 1 and suppose we have fit a model $\hat{f}(x)$ from some training data Tr. Let $(x_0, y_0)$ be a test observation drawn from the same distribution of training data. Prove that
+	\[
+	  E\bigg[(y_0 - \hat{f}(x_0))^2 \bigg] = \text{Var}(\hat{f}(x_0)) + [ \text{Bias}(\hat{f}(x_0))  ]^2 + \text{Var}(\epsilon).
+	\]
+	\item (Challenging problem, not required) For a classification problem with $Y \in \{ \text{Apple, Orange, Coconut} \}$ and $X \in \mathbb{R}$, we want to find a classifier $C(X): \mathbb{R}\rightarrow \{ \text{Apple, Orange, Coconut} \}$ minimizing the following Loss
+	\[
+	   E\left[  I(Y \neq C(X))| X = x \right].
+	\]
+Prove that this ideal classifier is the Bayes Classifier.	
+	\item  Using equation (3.4) in textbook, prove that in the case of simple linear regression, the least squares line always passes through the point $( \bar{x}, \bar{y})$.
+	\item For simple linear regression, we assume that $Y = \beta_0 + \beta_1 X + \epsilon$, where $\epsilon \sim N(0, \sigma^2)$ and $X$ is fixed (not random). We collect $n$ i.i.d. training sample $\{(x_1, y_1), \ldots, (x_n, y_n)\}$. Prove that the $(\hat{\beta}_0, \hat{\beta}_1)$ estimated through minimizing RSS equals to the one through maximizing likelihood. 
+	\item  (Challenging problem, not required) It is claimed in the book that in the case of simple linear regression of $Y$ onto $X$ (one predictor), the $R^2$ statistic (formula 3.17 in the book) is equal to the square of the correlation between $X$ and $Y$ (3.18). Prove that this is the case. For simplicity, you may assume that $\bar{x} = \bar{y} = 0$.
+	\item Exercise 3.7.8
+	\item Download the Regression.csv file from D2L, and write a modified $K$Nearest Neighbor prediction function to predict the values of $Y$ 
+	for $X = -2.30, -2.29, -2.28, \ldots, 2.28, 2.29, 2.30$ with
+	 $ K = 1, 5, 10,$ and $25$ (namely, we define the neighborhood of a point $x$ as the $K$ points in the training set with smallest Euclidean distance to $x$, and then calculate the \textcolor{red}{median} of the observed $y$ at these points).
+\begin{itemize}
+	\item[a] Make a scatter plot of original training data and the predicted results (you can use 'lines' in R). 
+    \item[b] Calculate the MSE for the training data and the testing data (the third column in the downloaded data) for different $K$s and plot it. (similar to Figure 2.10 in the textbook). Describe the pattern for the two MSE. What is the optimal 'K' you will choose?
+\end{itemize}	
+ \item Download wine.csv and 'wine.R' file from D2L. Run the scripts in wine.R to generate the training and testing sets. Write a $K$-Nearest Neighbor classifier function. 
+   \begin{itemize}
+   \item[a]  For $k = 1, 2,\ldots, 10, 20, 30$, calculate the training error rate and the testing error rate for different $K$s and plot it. (similar to Figure 2.17 in the textbook). Describe the pattern for the two error rates. What is the optimal 'K' you will choose?
+   \item[b] For \textcolor{red}{$K = 10$}, we fix $x_2 = 4$ and vary the  $x_1$ from 10 to  30 to estimate the $P(Y = 1 | X_1 = x_1, X_2 = x_2)$.  Approximately, find out the value of $x_1$ for the decision boundary with $x_2 = 4$. 
+\end{itemize}    
+  
+
+\end{enumerate}
+
+\end{document}
+
+
+
